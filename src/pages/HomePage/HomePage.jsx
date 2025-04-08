@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { changePage, getFilmsThunk } from '../../store/slices/filmsSlice'
 import FilmsCard from '../../components/FilmsCard/FilmsCard'
 import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './HomePage.css'
 
 function HomePage(){
@@ -27,7 +27,7 @@ function HomePage(){
 
     useEffect(() => {
         dispatch(getFilmsThunk({ language, pageCount }))
-    }, [pageCount, language])
+    }, [pageCount, language, pageCount])
 
     return(
         <div className="page">

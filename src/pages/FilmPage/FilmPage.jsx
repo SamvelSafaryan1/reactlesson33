@@ -9,15 +9,14 @@ function FilmPage(){
   const {language} = useSelector((state) => state.globalData)
   const {film} = useSelector((state) => state.filmsData)
   const {id} = useParams()
-console.log(film)
 
-    const imgUrl = 'https://image.tmdb.org/t/p/w500/'
+  const imgUrl = 'https://image.tmdb.org/t/p/w500/'
 
   useEffect(() => {
     dispatch(getOneFilm({id, language}))
   }, [id])
 
-  return (
+  return(
     <div className='FilmPage'>
         <div className="img-name">
             <img src={imgUrl + film.poster_path} width={250} height={300}/>
