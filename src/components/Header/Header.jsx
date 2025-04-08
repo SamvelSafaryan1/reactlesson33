@@ -20,7 +20,7 @@ function Header(){
             <div className="logo">
                 <img src={logo} alt='logo'/>
             </div>
-            <nav>
+            <nav className='nav'>
                 {
                     genres.map((genre) => {
                         return <Btn key={genre.id} genre={genre}/>
